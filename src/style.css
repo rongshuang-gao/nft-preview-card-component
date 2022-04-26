@@ -27,9 +27,44 @@ body {
   padding: 20px;
 }
 
-.card__image img {
+.card__image-container {
+  position: relative;
   width: 100%;
+  height: 100%;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 1rem;
+}
+
+.card__image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #00fff8;
+  opacity: 0;
+  transition: 0.3s ease;
+  border-radius: 1rem;
+}
+
+.card__image-overlay:hover {
+  opacity: 0.55;
+}
+
+.card__image-overlay-icon {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 .card__content {
@@ -40,12 +75,17 @@ body {
 .card__title {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 20px 0;
 }
 
+.card__text--highlight:hover {
+  cursor: pointer;
+  color: #00fff8;
+}
+
 .card__description {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
   margin: 1rem 0;
 }
